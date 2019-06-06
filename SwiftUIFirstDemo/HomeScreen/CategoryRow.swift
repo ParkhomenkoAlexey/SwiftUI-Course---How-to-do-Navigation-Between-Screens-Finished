@@ -11,7 +11,7 @@ import SwiftUI
 struct CategoryRow : View {
     
     var categoryName: String
-    var items: [UserResponse]
+    var items: [CoursesAndWebinarsResponse]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -41,8 +41,9 @@ struct CategoryRow : View {
 struct CategoryRow_Previews : PreviewProvider {
     static var previews: some View {
         CategoryRow(
-            categoryName: userResponse[0].category.rawValue,
-            items: Array(userResponse.prefix(4))
+            categoryName: materialResponse[0].category.rawValue,
+            items: Array(materialResponse.prefix(4))
+            
         )
     }
 }

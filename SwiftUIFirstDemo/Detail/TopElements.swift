@@ -10,15 +10,15 @@ import SwiftUI
 
 struct TopElements : View {
     
-    var user: UserResponse
+    var object: CoursesAndWebinarsResponse
     
     var body: some View {
         VStack(spacing: 20) {
             HStack(spacing: 0) {
-                Image("course")
+                Image(object.image)
                     .resizable()
                     .frame(width: 120, height: 120)
-                Text("Курс: Гид по языку программирования Swift")
+                Text(object.shortName)
                     .font(.title)
                     .lineLimit(nil)
                 .padding(EdgeInsets.init(top: 0, leading: 8, bottom: 0, trailing: 0))
@@ -89,7 +89,8 @@ struct LineStack: View {
 struct TopElements_Previews : PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
-            TopElements(user: userResponse[0])
+//            TopElements(user: userResponse[0])
+            TopElements(object: materialResponse[0])
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1001,
+        "name": "Курс: Основы программирования",
+        "image": "1",
+        "shortName": "Основы программирования",
+        "category": "Courses",
+        "description": "dsdsdsd",
+        "rating": 8.0,
+        "students": 5334,
+        "lessons": 29,
+        "isFavorite": false,
+        "isFeatured": false
+    },
+    {
+        "id": 2,
+        "name": "Курс: Гид по языку программирования Swift",
+        "image": "2",
+        "shortName": "Гид по языку программирования Swift",
+        "category": "Courses",
+        "description": "dsdsdsd",
+        "rating": 3.4,
+        "students": 3444,
+        "lessons": 42,
+        "isFavorite": false,
+        "isFeatured": false
+    },
+    {
+        "id": 3,
+        "name": "Курс: Мои первые приложения",
+        "image": "3",
+        "shortName": "Мои первые приложения",
+        "category": "Courses",
+        "description": "dsdsdsd",
+        "rating": 3.4,
+        "students": 3444,
+        "lessons": 20,
+        "isFavorite": false,
+        "isFeatured": false
+    },
+    {
+        "id": 4,
+        "name": "4",
+        "image": "Фреймворк UIKit",
+        "shortName": "Фреймворк UIKit",
+        "category": "Courses",
+        "description": "dsdsdsd",
+        "rating": 3.4,
+        "students": 3444,
+        "lessons": 25,
+        "isFavorite": false,
+        "isFeatured": false
+    },
+    {
+        "id": 5,
+        "name": "Основы программирования на Swift",
+        "image": "w1",
+        "shortName": "Основы программирования на Swift",
+        "category": "Webinars",
+        "description": "dsdsdsd",
+        "rating": 3.4,
+        "students": 3444,
+        "lessons": 25,
+        "isFavorite": false,
+        "isFeatured": false
+    },
+    {
+        "id": 6,
+        "name": "Мои первые приложения",
+        "image": "w2",
+        "shortName": "Мои первые приложения",
+        "category": "Webinars",
+        "description": "dsdsdsd",
+        "rating": 3.4,
+        "students": 3444,
+        "lessons": 25,
+        "isFavorite": false,
+        "isFeatured": false
+    }
+]

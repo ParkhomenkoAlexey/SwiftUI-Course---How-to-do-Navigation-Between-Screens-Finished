@@ -10,29 +10,21 @@ import SwiftUI
 
 struct CategoryHome: View {
     
-    var categories: [String: [UserResponse]] {
+    var categories: [String: [CoursesAndWebinarsResponse]] {
         .init(
-            grouping: userResponse,
+            grouping: materialResponse,
             by: { $0.category.rawValue }
         )
     }
     
-    let swiftbook: UserResponse = UserResponse(id: 8,
-        name: "Swiftbook.ru",
-        profileImage: "swiftbook",
-        email: "info@swiftbook.ru",
-        likes: "54.2K",
-        text: "Обучение созданию приложений на Swift для всех! Самое крупное и дружное сообщество по разработке под iOS :)",
-        category: .featured,
-        imageName: "stmarylake")
-        
+    
     var body: some View {
         NavigationView {
-            
-            List {
-                Cell(user: swiftbook)
-                    .listRowInsets(EdgeInsets())
-                ForEach(categories.keys.sorted().identified(by: \.self)) { key in
+            Cell(user: userResponse[0])
+                .listRowInsets(EdgeInsets())
+            List(materialResponse) { object in
+                
+                ForEach(self.categories.keys.sorted().identified(by: \.self)) { key in
                     CategoryRow(categoryName: key, items: self.categories[key]!)
                         }
                     .listRowInsets(EdgeInsets())

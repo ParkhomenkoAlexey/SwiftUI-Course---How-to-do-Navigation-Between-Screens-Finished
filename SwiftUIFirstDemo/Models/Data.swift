@@ -12,6 +12,7 @@ import UIKit
 import SwiftUI
 
 let userResponse: [UserResponse] = load("userModelData.json")
+let materialResponse: [CoursesAndWebinarsResponse] = load("coursesModelData.json")
 
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
