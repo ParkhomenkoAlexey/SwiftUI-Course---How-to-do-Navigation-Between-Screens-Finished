@@ -34,9 +34,6 @@ struct CategoryRow : View {
     }
 }
 
-
-
-
 #if DEBUG
 struct CategoryRow_Previews : PreviewProvider {
     static var previews: some View {

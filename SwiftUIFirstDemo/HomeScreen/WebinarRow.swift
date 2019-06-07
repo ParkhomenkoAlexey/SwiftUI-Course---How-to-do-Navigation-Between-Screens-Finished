@@ -28,8 +28,8 @@ struct WebinarRow : View {
                         }
                     }
                 }
-                }
-                .frame(height: 210)
+            }
+            .frame(height: 210)
         }
     }
 }

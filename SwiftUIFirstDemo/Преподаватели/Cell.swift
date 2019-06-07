@@ -15,7 +15,7 @@ struct Cell: View {
             TopView(user: user)
             Text(user.text)
                 .lineLimit(nil)
-            }.padding()
+        }.padding()
     }
 }
 

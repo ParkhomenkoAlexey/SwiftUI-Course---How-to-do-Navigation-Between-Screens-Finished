@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F0047A6F22A95C60004133EC /* coursesModelData.json in Resources */ = {isa = PBXBuildFile; fileRef = F0047A6E22A95C60004133EC /* coursesModelData.json */; };
-		F0047A7122A96494004133EC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0047A7022A96494004133EC /* Test.swift */; };
 		F072A5F422A9D539004C20E6 /* WebinarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072A5F322A9D539004C20E6 /* WebinarRow.swift */; };
 		F072A5F622A9D7EF004C20E6 /* WebinarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072A5F522A9D7EF004C20E6 /* WebinarItem.swift */; };
 		F0A7958F22A8293E00E204DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A7958E22A8293E00E204DA /* AppDelegate.swift */; };
@@ -30,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		F0047A6E22A95C60004133EC /* coursesModelData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coursesModelData.json; sourceTree = "<group>"; };
-		F0047A7022A96494004133EC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		F072A5F322A9D539004C20E6 /* WebinarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarRow.swift; sourceTree = "<group>"; };
 		F072A5F522A9D7EF004C20E6 /* WebinarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebinarItem.swift; sourceTree = "<group>"; };
 		F0A7958B22A8293E00E204DA /* SwiftUIFirstDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFirstDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 				F0A7958E22A8293E00E204DA /* AppDelegate.swift */,
 				F000A6FF22A8E2B80053FB47 /* Models */,
 				F0A7959022A8293E00E204DA /* SceneDelegate.swift */,
-				F0047A7022A96494004133EC /* Test.swift */,
 				F0CEBD2322A910210013FF56 /* HomeScreen */,
 				F0CEBD2A22A91ECF0013FF56 /* Detail */,
 				F0A795A622A8430C00E204DA /* Преподаватели */,
@@ -231,7 +228,6 @@
 				F0CEBD2722A912370013FF56 /* FriendsList.swift in Sources */,
 				F0A795C522A8473100E204DA /* UserResponse.swift in Sources */,
 				F072A5F622A9D7EF004C20E6 /* WebinarItem.swift in Sources */,
-				F0047A7122A96494004133EC /* Test.swift in Sources */,
 				F0CEBD2222A90E610013FF56 /* CategoryRow.swift in Sources */,
 				F0CEBD2C22A91F3A0013FF56 /* TopElements.swift in Sources */,
 				F0A795A822A8432400E204DA /* Data.swift in Sources */,

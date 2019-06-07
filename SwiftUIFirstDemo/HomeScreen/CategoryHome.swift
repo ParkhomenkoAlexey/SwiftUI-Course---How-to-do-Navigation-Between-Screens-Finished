@@ -29,12 +29,12 @@ struct CategoryHome: View {
                         CategoryRow(categoryName: key, items: self.categories[key]!)
                     } else if key == "Webinars" {
                         WebinarRow(categoryName: key, items: self.categories[key]!)
-                    }
+                        }
                     }
                     .listRowInsets(EdgeInsets())
                 NavigationButton(destination: FriendsList()) {
                     Text("Наши преподаватели")
-                }
+                    }
                 }
                 .navigationBarTitle(Text("Homepage"))
                 .navigationBarItems(trailing:
@@ -50,7 +50,6 @@ struct CategoryHome: View {
         }
     }
 }
-
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {

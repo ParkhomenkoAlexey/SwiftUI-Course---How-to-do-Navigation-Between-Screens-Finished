@@ -32,9 +32,8 @@ struct FeaturedLandmarks: View {
                 .renderingMode(.original)
                 .cornerRadius(10)
                 .frame(width: 170, height: 190)
-            }.padding(.leading, 15)
+        }.padding(.leading, 15)
     }
-
 }
 
 #if DEBUG

@@ -16,7 +16,6 @@ struct FriendsList : View {
             }
             .navigationBarTitle(Text("Teachers"))
         }
-        
     }
 }
 
