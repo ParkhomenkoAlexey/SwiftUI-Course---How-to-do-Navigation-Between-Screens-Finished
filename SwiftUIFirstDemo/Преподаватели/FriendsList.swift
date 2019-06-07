@@ -10,9 +10,13 @@ import SwiftUI
 
 struct FriendsList : View {
     var body: some View {
-        List(userResponse) { user in
-            Cell(user: user)
+        NavigationView {
+            List(userResponse) { user in
+                Cell(user: user)
+            }
+            .navigationBarTitle(Text("Teachers"))
         }
+        
     }
 }
 

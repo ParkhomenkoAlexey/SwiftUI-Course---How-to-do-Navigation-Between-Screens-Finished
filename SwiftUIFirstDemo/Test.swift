@@ -10,9 +10,14 @@ import SwiftUI
 
 struct Test : View {
     var body: some View {
-        List(userResponse) { object in
-            Text(object.name)
-        }
+        VStack(alignment: .leading, spacing: 0) {
+            Image("2")
+                .resizable()
+                .frame(width: 155, height: 155)
+                Text(/*@START_MENU_TOKEN@*/"Placeholder Placeholder Placeholder"/*@END_MENU_TOKEN@*/)
+            .layoutPriority(0.1)
+            }
+        
     }
 }
 

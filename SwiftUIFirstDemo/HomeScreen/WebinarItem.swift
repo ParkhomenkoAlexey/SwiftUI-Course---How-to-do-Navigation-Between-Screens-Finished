@@ -1,14 +1,27 @@
 //
-//  CategoryItem.swift
+//  WebinarItem.swift
 //  SwiftUIFirstDemo
 //
-//  Created by Алексей Пархоменко on 06.06.2019.
+//  Created by Алексей Пархоменко on 07.06.2019.
 //  Copyright © 2019 Алексей Пархоменко. All rights reserved.
 //
 
 import SwiftUI
 
-struct CategoryItem : View {
+struct WebinarItem : View {
+    
+    var object: CoursesAndWebinarsResponse
+    
+    var body: some View {
+            FeaturedLandmarks(object: object)
+                
+        .listRowInsets(EdgeInsets())
+        
+    }
+}
+
+
+struct FeaturedLandmarks: View {
     
     var object: CoursesAndWebinarsResponse
     
@@ -18,15 +31,16 @@ struct CategoryItem : View {
                 .resizable()
                 .renderingMode(.original)
                 .cornerRadius(10)
-                .frame(width: 170, height: 170)
+                .frame(width: 170, height: 190)
             }.padding(.leading, 15)
     }
+
 }
 
 #if DEBUG
-struct CategoryItem_Previews : PreviewProvider {
+struct WebinarItem_Previews : PreviewProvider {
     static var previews: some View {
-        CategoryItem(object: materialResponse[4])
+        WebinarItem(object: materialResponse[4])
     }
 }
 #endif

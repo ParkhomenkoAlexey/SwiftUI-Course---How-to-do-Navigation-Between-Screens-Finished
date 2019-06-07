@@ -13,84 +13,77 @@ struct TopElements : View {
     var object: CoursesAndWebinarsResponse
     
     var body: some View {
-        VStack(spacing: 20) {
-            HStack(spacing: 0) {
-                Image(object.image)
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                Text(object.shortName)
-                    .font(.title)
+
+        VStack(spacing: 16.0) {
+            VStack(spacing: 20.0) {
+                MainImage(object: object)
+                Text(object.name)
                     .lineLimit(nil)
-                .padding(EdgeInsets.init(top: 0, leading: 8, bottom: 0, trailing: 0))
+                    .font(.title)
+                }
+           
+                LittleStack(object: object)
                 
+            VStack(alignment: .leading, spacing: 12) {
+                Text("Описание")
+                    .font(.title)
+                Text(object.description)
+                .lineLimit(nil)
             }
-            LineStack()
+            
+            Spacer()
+        }.padding()
+        
+    }
+}
+
+struct LittleStack : View {
+    var object: CoursesAndWebinarsResponse
+    
+    var body: some View {
+        HStack(spacing: 30.0) {
+            VStack {
+                Text("\(object.lessons)")
+                    .font(.title)
+                Text("Lessons")
+                    .font(.body)
+                    .fontWeight(.medium)
+            }
+            VStack {
+                Text("\(object.students)")
+                    .font(.title)
+                Text("Lessons")
+                    .font(.body)
+                    .fontWeight(.medium)
+            }
         }
     }
 }
 
-struct LineStack: View {
+struct MainImage : View {
+    var object: CoursesAndWebinarsResponse
+    
     var body: some View {
-        HStack(spacing: 12) {
-            
-            HStack {
-                VStack {
-                    Text("41")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                    Text("Урок")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .color(.gray)
-                }
-                VStack {
-                    Text("9.7")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                    Text("Рейтинг")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .color(.gray)
-                }
-            }
-            HStack {
-                VStack {
-                    Text("1808")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                    Text("Участников")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .color(.gray)
-                }
-                VStack {
-                    Text("345")
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .multilineTextAlignment(.center)
-                    Text("Оценки")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .color(.gray)
-                }
-            }
-            
-            
+        VStack {
+            Image(object.image)
+                .resizable()
+                .renderingMode(.original)
+                .frame(width: 170, height: 170)
+                .cornerRadius(30)
+                .border(Color.gray, width: 3, cornerRadius: 30)
+                .shadow(radius: 10)
         }
-        
         
     }
 }
+
+
 
 #if DEBUG
 struct TopElements_Previews : PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
-//            TopElements(user: userResponse[0])
-            TopElements(object: materialResponse[0])
+        ForEach(["iPhone XS Max", "iPhone SE"].identified(by: \.self)) { deviceName in
+            TopElements(object: materialResponse[2])
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

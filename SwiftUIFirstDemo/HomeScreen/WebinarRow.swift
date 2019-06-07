@@ -1,14 +1,14 @@
 //
-//  CategoryRow.swift
+//  WebinarRow.swift
 //  SwiftUIFirstDemo
 //
-//  Created by Алексей Пархоменко on 06.06.2019.
+//  Created by Алексей Пархоменко on 07.06.2019.
 //  Copyright © 2019 Алексей Пархоменко. All rights reserved.
 //
 
 import SwiftUI
 
-struct CategoryRow : View {
+struct WebinarRow : View {
     
     var categoryName: String
     var items: [CoursesAndWebinarsResponse]
@@ -24,27 +24,20 @@ struct CategoryRow : View {
                 HStack(alignment: .center, spacing: 0) {
                     ForEach(self.items.identified(by: \.name)) { object in
                         NavigationButton(destination: TopElements(object: object)) {
-                            CategoryItem(object: object)
+                            WebinarItem(object: object)
                         }
                     }
                 }
-            }
-                .frame(height: 190)
+                }
+                .frame(height: 210)
         }
     }
 }
 
-
-
-
 #if DEBUG
-struct CategoryRow_Previews : PreviewProvider {
+struct WebinarRow_Previews : PreviewProvider {
     static var previews: some View {
-        CategoryRow(
-            categoryName: materialResponse[0].category.rawValue,
-            items: Array(materialResponse.prefix(3))
-            
-        )
+        WebinarRow(categoryName: "Webinars", items: Array(materialResponse.dropFirst(4)))
     }
 }
 #endif
