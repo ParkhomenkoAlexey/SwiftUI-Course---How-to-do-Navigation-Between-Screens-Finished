@@ -11,7 +11,7 @@ import SwiftUI
 struct WebinarRow : View {
     
     var categoryName: String
-    var items: [CoursesAndWebinarsResponse]
+    var items: [ProductsResponse]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -23,9 +23,7 @@ struct WebinarRow : View {
             ScrollView(showsHorizontalIndicator: false) {
                 HStack(alignment: .center, spacing: 0) {
                     ForEach(self.items.identified(by: \.name)) { object in
-                        NavigationButton(destination: TopElements(object: object)) {
                             WebinarItem(object: object)
-                        }
                     }
                 }
             }

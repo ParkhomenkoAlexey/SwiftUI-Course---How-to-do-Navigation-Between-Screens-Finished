@@ -14,7 +14,7 @@ import SwiftUI
     let swiftbook = UserResponse(id: 10, name: "Swiftbook", profileImage: "swiftbook", email: "info@swiftbook.ru", likes: "54.4K", text: "Обучение созданию приложений на Swift для всех!\nСамое крупное и дружное сообщество по разработке под iOS :)")
 
 let userResponse: [UserResponse] = load("userModelData.json")
-let materialResponse: [CoursesAndWebinarsResponse] = load("coursesModelData.json")
+let materialResponse: [ProductsResponse] = load("coursesModelData.json")
 
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {

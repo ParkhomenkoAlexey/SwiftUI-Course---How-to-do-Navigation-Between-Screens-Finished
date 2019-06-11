@@ -19,26 +19,12 @@ struct UserResponse: Hashable, Codable, Identifiable {
     var text: String
 }
 
-protocol CourseRepresenatable {
-    var name: String { get }
-    var image: String { get }
-    var shortName: String { get }
-    var category: Category { get }
-    var description: String { get }
-    var rating: Double { get }
-    var students: Int { get }
-    var lessons: Int { get }
-    var isFavorite: Bool  { get }
-    var isFeatured: Bool  { get }
-}
-
 enum Category: String, CaseIterable, Codable, Hashable {
-    case featured = "Featured"
     case courses = "Courses"
     case webinars = "Webinars"
 }
 
-struct CoursesAndWebinarsResponse: Hashable, Codable, Identifiable, CourseRepresenatable {
+struct ProductsResponse: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var image: String

@@ -10,13 +10,13 @@ import SwiftUI
 
 struct CategoryHome: View {
     
-    var categories: [String: [CoursesAndWebinarsResponse]] {
+    var categories: [String: [ProductsResponse]] {
         .init(
             grouping: materialResponse,
             by: { $0.category.rawValue }
         )
     }
-
+    
     var body: some View {
         NavigationView {
             
@@ -37,16 +37,7 @@ struct CategoryHome: View {
                     }
                 }
                 .navigationBarTitle(Text("Homepage"))
-                .navigationBarItems(trailing:
-                    PresentationButton(
-                        Image(systemName: "person.crop.circle")
-                            .imageScale(.large)
-                            .accessibility(label: Text("User Profile"))
-                            .padding(),
-                        
-                        destination: Text("User Profile")
-                    )
-            )
+                
         }
     }
 }

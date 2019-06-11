@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CategoryItem : View {
     
-    var object: CoursesAndWebinarsResponse
+    var object: ProductsResponse
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {

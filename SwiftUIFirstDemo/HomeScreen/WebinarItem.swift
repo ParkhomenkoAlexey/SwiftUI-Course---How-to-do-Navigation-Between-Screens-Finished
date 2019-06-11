@@ -10,7 +10,7 @@ import SwiftUI
 
 struct WebinarItem : View {
     
-    var object: CoursesAndWebinarsResponse
+    var object: ProductsResponse
     
     var body: some View {
             FeaturedLandmarks(object: object)
@@ -23,7 +23,7 @@ struct WebinarItem : View {
 
 struct FeaturedLandmarks: View {
     
-    var object: CoursesAndWebinarsResponse
+    var object: ProductsResponse
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
