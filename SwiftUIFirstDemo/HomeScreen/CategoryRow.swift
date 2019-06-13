@@ -23,7 +23,10 @@ struct CategoryRow : View {
             ScrollView(showsHorizontalIndicator: false) {
                 HStack(alignment: .center, spacing: 0) {
                     ForEach(self.items.identified(by: \.name)) { object in
+                        NavigationButton(destination: DetailScreen(object: object)) {
                             CategoryItem(object: object)
+                        }
+                        
                     }
                 }
             }

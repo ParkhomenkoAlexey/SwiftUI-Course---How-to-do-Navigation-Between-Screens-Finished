@@ -23,7 +23,9 @@ struct WebinarRow : View {
             ScrollView(showsHorizontalIndicator: false) {
                 HStack(alignment: .center, spacing: 0) {
                     ForEach(self.items.identified(by: \.name)) { object in
+                        NavigationButton(destination: DetailScreen(object: object)) {
                             WebinarItem(object: object)
+                        }
                     }
                 }
             }
